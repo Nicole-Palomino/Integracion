@@ -1,0 +1,39 @@
+<div class="container">
+    <hr>
+    <div class="row align-items-start">
+        <div class="col-9"><h1>Listado de Empleados</h1></div>
+    </div>
+
+    <hr>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <th class="text-center">DNI</th>
+                <th class="text-center">Área</th>
+                <th class="text-center">Nombres</th>
+                <th class="text-center">Apellidos</th>
+                <th class="text-center">Sexo</th>
+                <th class="text-center">Edad</th>
+                <th class="text-center">Correo</th>
+                <th class="text-center">Salario</th>
+                <th class="text-center">Acciones</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleado of empleados">
+                    <td class="text-center">{{empleado.dni}}</td>
+                    <td class="text-center">{{empleado.cod_area}}</td>
+                    <td class="text-center">{{empleado.nombres}}</td>
+                    <td class="text-center">{{empleado.apellidos}}</td>
+                    <td class="text-center">{{empleado.sexo}}</td>
+                    <td class="text-center">{{empleado.edad}}</td>
+                    <td class="text-center">{{empleado.email}}</td>
+                    <td class="text-center">{{empleado.salario}}</td>
+                    <td class="text-center">
+                        <button class="btn btn-success" >
+                            Seleccionar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
